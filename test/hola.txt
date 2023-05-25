@@ -1,1 +1,19 @@
-hola buenas
+# crear una nueva rama
+	git branch rama-nombre
+# cambiar el ambiente a la nueva rama
+	git checkout rama-nombre
+# crear una nueva rama
+	git branch nueva-rama
+# cambiar el ambiente a la nueva rama
+	git checkout nueva-rama
+
+/*
+# crear un cambio
+	touch nuevo-archivo.js
+*/
+
+# cometer el cambio
+	git add .
+	git commit -m "añadir nuevo archivo"
+# empujar a una nueva rama
+	git push --set-upstream origin nueva-rama
