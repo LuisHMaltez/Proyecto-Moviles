@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_firstPage_to_login_signin"
             app:destination="@id/login_signin" />
+        <action
+            android:id="@+id/action_firstPage_to_categoryFragment2"
+            app:destination="@id/categoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/login_signin"
@@ -21,5 +24,26 @@
         <action
             android:id="@+id/action_login_signin_to_firstPage"
             app:destination="@id/firstPage" />
+        <action
+            android:id="@+id/action_login_signin_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_signin_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.fragmentosv2.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.fragmentosv2.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.fragmentosv2.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 </navigation>

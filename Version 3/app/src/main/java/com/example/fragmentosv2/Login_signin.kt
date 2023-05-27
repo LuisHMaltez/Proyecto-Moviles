@@ -14,6 +14,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class Login_signin : Fragment() {
 
     private lateinit var buttonBack: ImageButton
+    private lateinit var buttonLogin: Button
+    private lateinit var buttonRegister: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,11 +40,19 @@ class Login_signin : Fragment() {
 
     private fun bind() {
         buttonBack = view?.findViewById(R.id.btnBack) as ImageButton
+        buttonLogin = view?.findViewById(R.id.btnSignIn) as Button
+        buttonRegister = view?.findViewById(R.id.btnLogIn) as Button
     }
 
     private fun listeners() {
         buttonBack.setOnClickListener {
             it.findNavController().navigate(R.id.action_login_signin_to_firstPage)
+        }
+        buttonLogin.setOnClickListener {
+            it.findNavController().navigate(R.id.action_login_signin_to_loginFragment)
+        }
+        buttonRegister.setOnClickListener {
+            it.findNavController().navigate(R.id.action_login_signin_to_registerFragment)
         }
     }
 }

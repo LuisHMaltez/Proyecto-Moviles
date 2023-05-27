@@ -6,4 +6,10 @@
     <string name="logo_description">Logo</string>
     <string name="btn_log_in_text">Log In</string>
     <string name="btn_sign_in_text">Sign In</string>
+    <string name="done_string">Done</string>
+    <string name="question_categories">What interests you? Tap a few categories you like</string>
+    <string name="omit_string"><![CDATA[Omit->]]></string>
+    <string name="email_string">Email</string>
+    <string name="password_string">Password</string>
+    <string name="login_string">Log In</string>
 </resources>
