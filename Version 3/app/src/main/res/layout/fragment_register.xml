@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterFragment"
-    android:background="@drawable/background_session">
+    android:background="@drawable/background_session"
+
+    tools:context=".RegisterFragment">
 
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_margin="@dimen/medium_gap"
+        android:layout_width="@dimen/btn_back"
+        android:layout_height="@dimen/btn_back"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/rounded_background"
+        android:contentDescription="@string/image_button_go_to_back_string"
         android:padding="8dp"
         android:rotation="90"
         android:scaleType="centerCrop"
@@ -25,7 +28,7 @@
         android:id="@+id/btn_register"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="48dp"
         android:alpha="0.8"
         android:background="@drawable/rounded_button_background"
         android:text="Register"
@@ -34,42 +37,154 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedTextField"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/CvFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/FullName_string"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/IP_FullName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_size"
+            android:alpha="0.3"
+            android:background="@drawable/rounded_button_background"
+            android:textAlignment="center" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CvUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/UserName_string"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CvFullName">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/IP_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_size"
+            android:alpha="0.3"
+            android:background="@drawable/rounded_button_background"
+            android:textAlignment="center" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CvEmail_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:hint="@string/email_string"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register"
-        android:backgroundTint="@color/btnColor"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/CvUserName">
 
         <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/IP_Email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="@dimen/standard_size"
+            android:alpha="0.3"
+            android:background="@drawable/rounded_button_background"
+            android:textAlignment="center" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedTextField2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/CV_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:hint="@string/password_string"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField">
+        app:layout_constraintTop_toBottomOf="@+id/CvEmail_register">
 
         <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/IP_Password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="@dimen/standard_size"
+            android:alpha="0.3"
+            android:background="@drawable/rounded_button_background"
+            android:textAlignment="center" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CvConfirmEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/confirmpass_string"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CV_Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/IP_ConfirmPass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_size"
+            android:alpha="0.3"
+            android:background="@drawable/rounded_button_background"
+            android:textAlignment="center" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="@dimen/btn_back"
+        android:layout_height="@dimen/btn_back"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_background"
+        android:contentDescription="@string/image_button_go_to_back_string"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arro_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CvConfirmEmail" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

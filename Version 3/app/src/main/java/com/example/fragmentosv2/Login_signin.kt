@@ -40,8 +40,8 @@ class Login_signin : Fragment() {
 
     private fun bind() {
         buttonBack = view?.findViewById(R.id.btnBack) as ImageButton
-        buttonLogin = view?.findViewById(R.id.btnSignIn) as Button
-        buttonRegister = view?.findViewById(R.id.btnLogIn) as Button
+        buttonRegister = view?.findViewById(R.id.btnSignIn) as Button
+        buttonLogin= view?.findViewById(R.id.btnLogIn) as Button
     }
 
     private fun listeners() {
